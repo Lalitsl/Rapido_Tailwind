@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rapido.contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+ 
+</head>
+<style>
+  .body1 {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #202020;
+}
+.container1 {
+
+  /*display: flex;
+  height: 300px;
+  width: 300px;*/
+  align-items: center;
+  justify-content: center;
+  position: relative;
+   font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  min-width: 300px;
+  min-height: 400px;
+  padding: 40px 30px 30px;
+  border-radius: 20px;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.25);
+}
+.container1 span {
+  color: #fff;
+  position: relative;
+  display: grid;
+  /*width: 80px;*/
+  width: 40px;
+  place-items: center;
+  margin: 8px;
+  height:40px;
+  background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+  box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+  user-select: none;
+  cursor: pointer;
+  font-weight: 400;
+  border-radius: 10px;
+}
+.calculator span:active {
+  filter: brightness(1.5);
+}
+.calculator span::before {
+  content: "";
+  position: absolute;
+ /* top:3px;
+  left: 4px;
+  bottom:7px;
+  right:7px;*/
+  /*border-radius: 10px;*/
+  border-radius:5px;
+  background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid #0004;
+  border-bottom: 1px solid #0004;
+  border-top: 1px solid #0009;
+}
+.calculator span i {
+  position: relative;
+  font-style: normal;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.calculator {
+  position: relative;
+  display: grid;
+}
+.calculator .value {
+  position: relative;
+  grid-column: span 4;
+  /*height: 100px;*/
+  width: calc(100% - 20px);
+  /*left: 10px;*/
+  border: none;
+  outline: none;
+  background-color: #a7af7c;
+  /*margin-bottom: 10px;*/
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+  text-align: right;
+ /* padding: 10px;*/
+  font-size: 2em;
+}
+.calculator .clear {
+  grid-column: span 2;
+ /* width: 180px;*/
+ width: 100px;
+  background: #f00;
+}
+.calculator .clear::before {
+  background: linear-gradient(90deg, #d20000, #ffffff5c);
+  border-left: 1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+.calculator .plus {
+  grid-row: span 2;
+  height: 100px;
+}
+.calculator .equal {
+  background: #2196f3;
+}
+.calculator .equal::before{
+  background: linear-gradient(90deg, #1479c9, #ffffff5c);
+  border-left: 1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+</style>
+<body>
+
+
+<!-- .......................  navbar section ............................. -->
+<section>
+  <div class="">    
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+      <div class="flex flex-wrap items-center justify-between ">
+        <a href="#" class="flex items-center">
+            <img src="rapido_image/rapido logo.png" class="h-20 sm:h-20 ml-5" alt="rapido Logo" />
+            <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
+        </a>
+        <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a href="index.html" class="block py-2 pl-3 pr-4 text-white bg-yellow-500 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent lg:ml-[0px]" aria-current="page">Home</a>
+            </li>  
+            <li>
+              <a href="about.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About us</a>
+            </li>
+            <li>
+              <a href="careers.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Careers</a>
+            </li>
+            <li>
+              <a href="contact.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact us</a>
+            </li>
+             <li>
+              <a href="carporate.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Rapido Corporate</a>
+            </li>
+
+            <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"> Rapido Calculator <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                      <li>
+                        <a href="rapido_car_game.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Rapido Game</a>
+                      </li>
+                      <li>
+                        <a href="rapido_simple_js_calcu.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Simple Calculator</a>
+                      </li>
+                      <li>
+                        <a href="bill.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Bill</a>
+                      </li>
+                    </ul>
+                    <div class="py-1">
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
+                    </div>
+                </div>
+            </li>
+             <li>
+                <a href="resistration.html"><button class="w-28 h-10 bg-black border rounded-xl mt-0 text-white">Registration</button></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</section>
+<!-- ...................  navbar end ...................... -->
+
+
+<!-- ............ calculator section start ................ -->
+
+<center><section class="container1 body1" style="height:300px; width:300px; margin-bottom: 20px;">
+<div class="container" >
+      <form action="" name="calc" class="calculator">
+        <input type="text" class="value" readonly name="txt" />
+        <span class="num clear" onclick="calc.txt.value=''"><i>C</i></span>
+        <span class="num" onclick="calc.txt.value+='/'"><i>/</i></span>
+        <span class="num" onclick="calc.txt.value+='*'"><i>*</i></span>
+        <span class="num" onclick="calc.txt.value+='7'"><i>7</i></span>
+        <span class="num" onclick="calc.txt.value+='8'"><i>8</i></span>
+        <span class="num" onclick="calc.txt.value+='9'"><i>9</i></span>
+        <span class="num" onclick="calc.txt.value+='-'"><i>-</i></span>
+        <span class="num" onclick="calc.txt.value+='4'"><i>4</i></span>
+        <span class="num" onclick="calc.txt.value+='5'"><i>5</i></span>
+        <span class="num" onclick="calc.txt.value+='6'"><i>6</i></span>
+        <span class="num plus" onclick="calc.txt.value+='+'"><i>+</i></span>
+        <span class="num" onclick="calc.txt.value+='1'"><i>1</i></span>
+        <span class="num" onclick="calc.txt.value+='2'"><i>2</i></span>
+        <span class="num" onclick="calc.txt.value+='3'"><i>3</i></span>
+        <span class="num" onclick="calc.txt.value+='0'"><i>0</i></span>
+        <span class="num" onclick="calc.txt.value+='00'"><i>00</i></span>
+        <span class="num" onclick="calc.txt.value+='.'"><i>.</i></span>
+
+      <span class="num equal" onclick="document.calc.txt.value=eval(calc.txt.value)"><i>=</i></span>
+      </form>
+    </div>
+
+</section></center>
+
+
+
+
+<!-- ............. calculator section end .............. -->
+
+<!-- ............................... footer section   ................... -->
+<section class="bg-gray-900 p-10 mt-2">
+  <div class="bg-transparent grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2  grid-cols-2 gap-3">
+      <div class="p-5">
+         <p class="text-xl px-3 text-left font-bold text-white mb-10">Customer app</p>
+          <a href="#"> <img src="rapido_image/app-store.png"> </a>
+      </div>
+
+       <div class="p-5">
+         <p class="text-xl px-3 text-left font-bold text-white mb-10">Captain app</p>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwj2v6vr87n7AhVaDisKHYb9DcsYABAAGgJzZg&ohost=www.google.com&cid=CAASJuRo_GEMIbF2eNLwU6vAL5_50396Hqdny32Rs8JELpfhxA-1h-3o&sig=AOD64_1SpaHOyVxswmuLZTuCy64CheQt4w&q&adurl&ved=2ahUKEwjqnKXr87n7AhUbxDgGHa4ZA08Q0Qx6BAgIEAE"><img src="rapido_image/google play store.png"> </a>
+      </div>
+      
+       <div class="p-5">
+         <p class="text-xl px-3 font-bold text-white">Services</p>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white mt-5">Home</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">About Us</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Careers</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Carporate</p></a>
+       </div>
+
+      <div class="p-5">
+         <p class="text-xl px-3 font-bold text-white">Policy</p>
+         <a href="#"><p class="text-md px-3 text-left p-3 text-white mt-5">Privacy</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Customer Terms</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Captain Terms</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Press</p></a>
+      </div>
+       <div class="p-5">
+         <p class="text-xl text-left font-bold text-white">Follow Us</p><br>
+         <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiZ7bmr7LX7AhVIUGwGHb21BksQFnoECA4QAQ&url=https%3A%2F%2Fwww.facebook.com%2Frapido4bike%2F&usg=AOvVaw0OA2xan8EiMAnzKDNWoXbW"><i class="fa-brands fa-facebook-f text-2xl ml-3 text-white"></i></a>
+         <a href="https://www.twitter.com"><i class="fa-brands fa-twitter text-2xl ml-3 text-white"></i></a>
+         <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin-in text-2xl ml-3 text-white"></i></a>
+         <a href="https://www.instagram.com/rapidoapp/?hl=en"><i class="fa-brands fa-instagram text-2xl ml-3 text-white"></i></a>
+      </div>
+
+  </div><hr>
+     <p class="text-md px-3 text-center p-3 text-white">Copyright © Rapido.com | Roppen Transportation. All rights reserved.</p>
+</section>
+ 
+
+<script src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
+
+</body>
+</html>
+
+
+
+

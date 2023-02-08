@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rapido.careers</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+ 
+</head>
+<body>
+
+
+<!-- .......................  navbar section ............................. -->
+<section>
+	<div class="">		
+		<nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+		  <div class="flex flex-wrap items-center justify-between ">
+		    <a href="#" class="flex items-center">
+		        <img src="rapido_image/rapido logo.png" class="h-20 sm:h-20 ml-5" alt="rapido Logo" />
+		        <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
+		    </a>
+		    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+		      <span class="sr-only">Open main menu</span>
+		      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+		    </button>
+		    <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+		      <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+		        <li>
+		          <a href="index.html" class="block py-2 pl-3 pr-4 text-white bg-yellow-500 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent lg:ml-[0px]" aria-current="page">Home</a>
+		        </li>
+		        <li>
+		          <a href="about.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About us</a>
+		        </li>
+		        <li>
+		          <a href="careers.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Careers</a>
+		        </li>
+		        <li>
+		          <a href="contact.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact us</a>
+		        </li>
+		         <li>
+		          <a href="carporate.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Rapido Corporate</a>
+		        </li>
+
+		        <li>
+		            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"> Rapido Calculator <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+		            <!-- Dropdown menu -->
+		            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+		                <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+		                  <li>
+		                    <a href="rapido_car_game.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Rapido Game</a>
+		                  </li>
+		                  <li>
+		                    <a href="rapido_simple_js_calcu.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Simple Calculator</a>
+		                  </li>
+		                  <li>
+		                    <a href="bill.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Bill</a>
+		                  </li>
+		                </ul>
+		                <div class="py-1">
+		                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
+		                </div>
+		            </div>
+		        </li>
+		         <li>
+		          	<a href="resistration.html"><button class="w-28 h-10 bg-black border rounded-xl mt-0 text-white">Registration</button></a>
+		        </li>
+
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+
+	</div>
+</section>
+<!-- ...................  navbar end ...................... -->
+
+<!-- ...................... careers section ............. -->
+
+<section>
+	<div class="flex flex-wrap mt-20">
+		<div class="w-full md:w-full lg:w-1/2 ">
+			<div class="p-5"> 
+				<p class="text-4xl font-bold mt-10 ">Be a part of our team.</p>
+				<p class="mt-5 text-xl">We are so glad you want to join us in exploring a world of endless opportunities at Rapido. Let’s find a spot for you.</p>
+				<img src="https://cdn.dribbble.com/users/1255381/screenshots/4574971/re.gif">
+			</div>
+		</div>		
+		<div class="w-full md:w-full lg:w-1/2 ">
+			<div class=" p-5">
+				<div class="h-[600px] lg:w-[400px] md:w-[400px] sm:w-[250] w-200px rounded-[100px] bg-yellow-500 sm:scale-75 md:scale-100 lg:scale-125 lg:ml-[100px]">
+					<img src="rapido_image/rapidocareer2.png" class="scale-75 rounded-b-[100px] rounded-tr-[100px] ml-1">
+					<img src="rapido_image/rapidocareer1.png" class="scale-75 rounded-t-[100px] float-right mt-[-100px] rounded-bl-[100px]">
+				</div>
+			</div>
+		</div>	
+	</div>
+</section>
+
+<!-- ............ why work with us .............. -->
+
+<section class="mt-20">
+	<p class="text-3xl text-center font-bold mb-10 mt-5">Why work with us</p>
+	<div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 mx-10">
+      	<div>
+      		<img src="rapido_image/rapidocareer3.png" class="scale-125">
+			<p class="pt-5">We pride ourselves on rewarding great work with great compensation.</p>
+      	</div>	
+
+      	<div>
+      	<img src="rapido_image/rapidocareer4.png" class="scale-125">
+    	<p class="pt-5">Flexible hours and vacation. Night owls welcome.</p>
+      	</div>	
+
+      	<div>
+      		<img src="rapido_image/rapidocareer5.png" class="scale-125">
+    		<p class="pt-5">Meet new cultures and enjoy our crew from all over the world</p>
+      	</div>		
+	</div>
+</section>
+
+<!-- ............ why work with us end  .............. -->
+
+
+
+<!-- ................. multiple cards............... -->
+
+<section>
+  <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+    <!--Card 1-->
+	    <div class="rounded overflow-hidden shadow-lg">
+	      <img class="w-full" src="rapido_image/rapidocareer6.png" alt="card-img">
+	    </div>
+	    <!--Card 2-->
+	    <div class="rounded overflow-hidden shadow-lg">
+	      <img class="w-full" src="rapido_image/rapidocareer7.png" alt="card-img">
+	    </div>
+	    <!--Card 3-->
+	    <div class="rounded overflow-hidden shadow-lg">
+	      <img class="w-full" src="rapido_image/rapidocareer8.png" alt="card-img">
+	    </div>
+  </div>
+</section>
+
+<section>
+  <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+    <!--Card 1-->
+	    <div class="rounded overflow-hidden shadow-lg">
+	      <img class="w-full" src="rapido_image/rapidocareer9.png" alt="card-img">
+	    </div>
+	    <!--Card 2-->
+	    <div class="rounded overflow-hidden shadow-lg">
+	      <img class="w-full" src="rapido_image/rapidocareer10.jpg" alt="card-img">
+	    </div>
+	    <!--Card 3-->
+	    <div class="rounded overflow-hidden shadow-lg">
+	      <img class="w-full" src="rapido_image/rapidocareer11.png" alt="card-img">
+	    </div>
+  </div>
+</section>
+
+<!-- ................ multiple card end ............ -->
+		
+<!-- ................... carousal section start .............. -->
+<section>
+	<p class="text-center text-3xl font-bold mt-5 mb-5">What our employees say</p>
+<div id="default-carousel" class="relative" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+         <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <span class="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+				<section>
+					<div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-2 mx-5">
+						<div>
+							<div class="max-w-lg rounded overflow-hidden shadow-lg lg:mx-10 p-5 h-72">
+								  <img class="w-20 h-20 rounded-full" src="rapido_image/rapidocareer12.jfif" alt="Sunset in the mountains">
+								    <p class="text-gray-700 text-base"> Rapido for me hold's a special place. I was skeptical before joining. But after I joined, the experience speaks for itself. Hardworking and goal oriented team as well as Manager. Everyday, I learn...</p>
+								    <i class="fa-solid fa-star text-red-500 mt-5"></i>
+				  	  	            <i class="fa-solid fa-star text-red-500"></i>
+				  	  	            <i class="fa-solid fa-star text-red-500"></i>
+								  <div class="font-bold text-xl mb-2 text-right">Pritha Mistry <br> Cluster Manager</div>
+							</div>
+						</div>
+						<div>
+				             <div class="max-w-lg rounded overflow-hidden shadow-lg lg:mx-10 p-5 h-72">
+								  <img class="w-20 h-20 rounded-full" src="rapido_image/rapidocareer13.jfif" alt="Sunset in the mountains">
+								    <p class="text-gray-700 text-base">Rapido has been Home for me. Pleasant multicultural environment and the enthusiasm which everyone around carries is infectious. Proud to be a part of Rapido.</p>
+								    <i class="fa-solid fa-star text-red-500 mt-5"></i>
+				  	  	            <i class="fa-solid fa-star text-red-500"></i>
+				  	  	            <i class="fa-solid fa-star text-red-500"></i>
+								  <div class="font-bold text-xl mb-2 text-right">Bhavana Rathi<br>ORM Specialist</div>
+							</div>
+						</div>
+					</div>
+				</section>
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+				<section>
+					<div class="flex flex-wrap grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-2 mx-5">
+						<div>
+							<div class="max-w-lg rounded overflow-hidden shadow-lg lg:mx-10 p-5 h-72">
+								  <img class="w-20 h-20 rounded-full" src="rapido_image/r1.png" alt="Sunset in the mountains">
+								    <p class="text-gray-700 text-base">I am an intern here at Rapido Pricing team and so far my journey here is awesome, i am learning something new here everyday and everyone is always ready to help, and the things i like here...</p>
+								    <i class="fa-solid fa-star text-red-500 mt-5"></i>
+				  	  	            <i class="fa-solid fa-star text-red-500"></i>
+				  	  	            <i class="fa-solid fa-star text-red-500"></i>
+								  <div class="font-bold text-xl mb-2 text-right">jenish<br>Intern</div>
+							</div>
+						</div>
+						<div>
+				             <div class="max-w-lg rounded overflow-hidden shadow-lg lg:mx-10 p-5 h-72">
+								  <img class="w-20 h-20 rounded-full" src="rapido_image/rapidocareer11.png" alt="Sunset in the mountains">
+								    <p class="text-gray-700 text-base"> Being a part of Rapido has been such a delightful journey. It has been more than a year that I have been on the ride of rapid growth along with the company with a lot of opportunities for you to...</p>
+								    <i class="fa-solid fa-star text-red-500 mt-5"></i>
+				  	  	            <i class="fa-solid fa-star text-red-500"></i>
+				  	  	            <i class="fa-solid fa-star text-red-500"></i>
+								  <div class="font-bold text-xl mb-2 text-right">Samarth<br>Graphic Designer</div>
+							</div>
+						</div>
+					</div>
+				</section>
+        </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2 bg-gray-500 rounded-full">
+        <button type="button" class="w-3 h-3 rounded-full bg-black " aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full bg-black" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-black bg-blue-500 rounded-full sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-black bg-blue-500 rounded-full sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+</section>
+<!-- ................... carousal section end .............. -->
+
+
+<!-- ..................... Career Opportunities ......................... -->
+<section>
+    <p class="text-center text-4xl font-bold mt-10">Career Opportunities</p>
+   <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 mx-10 gap-10 mt-10">
+        <div class=" p-5">
+            <p class="text-2xl">Retention Strategist</p>
+            <p class="">Marketing | Based out of Bangaloret</p>
+
+            <p class="text-2xl mt-5">Sr. Product Engineer - iOS</p>
+            <p class="">Engineering | Based out of Bangalore</p>
+
+            <p class="text-2xl mt-5">People Champion</p>
+            <p class="">Human Resources | Based out of Bangalore</p>
+
+            <p class="text-2xl mt-5">Senior Manager PR</p>
+            <p class="">Marketing | Based out of Bangalore</p>
+
+            <p class="text-2xl mt-5">Senior Product Test Engineer</p>
+            <p class="">Engineering | Based out of Bangalore</p>
+        </div>
+        <div class=" p-5">
+            <p class="text-2xl">Sr. Product Engineer - Captain Android</p>
+            <p class="">Engineering | Based out of Bangalore</p>
+
+            <p class="text-2xl mt-5">Senior Business Analyst</p>
+            <p class="">Data | Based out of Bangalore</p>
+
+            <p class="text-2xl mt-5">Product Engineer - Captain Android</p>
+            <p class="">Engineering | Based out of Bangalore</p>
+
+            <p class="text-2xl mt-5">Manager/Senior Manager - Brand</p>
+            <p class="">Marketing | Based out of Bangalore</p>
+
+            <p class="text-2xl mt-5">Senior Product Engineer - Backend</p>
+            <p class="">Engineering | Based out of Bangalore</p>
+        </div>
+        
+   </div>
+</section>
+<!-- ..................... Career Opportunities end ......................... -->
+
+
+<!-- ............................... footer section   ................... -->
+<section class="bg-gray-900 p-10 mt-20">
+  <div class="bg-transparent grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2  grid-cols-2 gap-3">
+      <div class="p-5">
+         <p class="text-xl px-3 text-left font-bold text-white mb-10">Customer app</p>
+          <a href="#"> <img src="rapido_image/app-store.png"> </a>
+      </div>
+
+       <div class="p-5">
+         <p class="text-xl px-3 text-left font-bold text-white mb-10">Captain app</p>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwj2v6vr87n7AhVaDisKHYb9DcsYABAAGgJzZg&ohost=www.google.com&cid=CAASJuRo_GEMIbF2eNLwU6vAL5_50396Hqdny32Rs8JELpfhxA-1h-3o&sig=AOD64_1SpaHOyVxswmuLZTuCy64CheQt4w&q&adurl&ved=2ahUKEwjqnKXr87n7AhUbxDgGHa4ZA08Q0Qx6BAgIEAE"><img src="rapido_image/google play store.png"> </a>
+      </div>
+      
+       <div class="p-5">
+         <p class="text-xl px-3 font-bold text-white">Services</p>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white mt-5">Home</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">About Us</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Careers</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Carporate</p></a>
+       </div>
+
+      <div class="p-5">
+         <p class="text-xl px-3 font-bold text-white">Policy</p>
+         <a href="#"><p class="text-md px-3 text-left p-3 text-white mt-5">Privacy</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Customer Terms</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Captain Terms</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Press</p></a>
+      </div>
+       <div class="p-5">
+         <p class="text-xl text-left font-bold text-white">Follow Us</p><br>
+         <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiZ7bmr7LX7AhVIUGwGHb21BksQFnoECA4QAQ&url=https%3A%2F%2Fwww.facebook.com%2Frapido4bike%2F&usg=AOvVaw0OA2xan8EiMAnzKDNWoXbW"><i class="fa-brands fa-facebook-f text-2xl ml-3 text-white"></i></a>
+         <a href="https://www.twitter.com"><i class="fa-brands fa-twitter text-2xl ml-3 text-white"></i></a>
+         <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin-in text-2xl ml-3 text-white"></i></a>
+         <a href="https://www.instagram.com/rapidoapp/?hl=en"><i class="fa-brands fa-instagram text-2xl ml-3 text-white"></i></a>
+      </div>
+
+  </div><hr>
+     <p class="text-md px-3 text-center p-3 text-white">Copyright © Rapido.com | Roppen Transportation. All rights reserved.</p>
+</section>
+
+
+  
+
+ 
+
+
+<script src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
+
+</body>
+</html>

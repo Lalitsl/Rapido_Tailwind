@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rapido.car_game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Libre+Baskerville">
+
+</head>
+<style>
+  #back {
+  background: url(rapido_image/side.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+    background-attachment: fixed;
+    width: auto;
+    height: 450px;
+}
+#road {
+  background: url(rapido_image/road.jpg);
+}
+#img {
+  width: 150px;
+}
+.button1 {
+  background-color:green;
+  width: 100px;
+  font-size: 30px;
+    margin-top:0px;
+    margin-left:20px;
+    border-top-right-radius:20px;
+    border-bottom-left-radius: 20px;
+}
+#dbtn i {
+  font-size: 50px;
+  color: white;
+}
+</style>
+<body>
+
+
+<!-- .......................  navbar section ............................. -->
+<section>
+  <div class="">    
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+      <div class="flex flex-wrap items-center justify-between ">
+        <a href="#" class="flex items-center">
+            <img src="rapido_image/rapido logo.png" class="h-20 sm:h-20 ml-5" alt="rapido Logo" />
+            <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
+        </a>
+        <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a href="index.html" class="block py-2 pl-3 pr-4 text-white bg-yellow-500 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent lg:ml-[0px]" aria-current="page">Home</a>
+            </li>  
+            <li>
+              <a href="about.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About us</a>
+            </li>
+            <li>
+              <a href="careers.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Careers</a>
+            </li>
+            <li>
+              <a href="contact.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact us</a>
+            </li>
+             <li>
+              <a href="carporate.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Rapido Corporate</a>
+            </li>
+
+            <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"> Rapido Calculator <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                      <li>
+                        <a href="rapido_car_game.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Rapido Game</a>
+                      </li>
+                      <li>
+                        <a href="rapido_simple_js_calcu.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Simple Calculator</a>
+                      </li>
+                      <li>
+                        <a href="bill.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My Bill</a>
+                      </li>
+                    </ul>
+                    <div class="py-1">
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
+                    </div>
+                </div>
+            </li>
+             <li>
+                <a href="resistration.html"><button class="w-28 h-10 bg-black border rounded-xl mt-0 text-white">Registration</button></a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</section>
+<!-- ...................  navbar end ...................... -->
+
+<!-- ................ game section  -->
+
+
+<div id="back">
+  <div id="dbtn">
+    <button class="button1" onclick="start();" style="margin-top:50px;">Start</button><br><br>
+    <button class="button1" onclick="stop();">Stop</button><br><br>
+    <button class="button1" id="play btn" onclick="sound();">PP</button>
+  </div>
+  <audio id="audio">
+    <source src="rapido_image/car-horn.mp3" type="audio/mp3">
+  </audio>
+    
+</div>
+<div id="road">
+  <img src="rapido_image/car3.png" id="img">
+</div>
+
+<script>
+m=0;
+var y;
+function start()
+{ 
+    y=setInterval(run,100);
+    function run()
+    {
+     if(m==1070)
+     {
+      clearInterval(y);
+      m=0;
+     }
+     else{
+       m+=5;
+       var x = document.getElementById("img");
+       x.style.marginLeft=m+'px';
+     }
+    }
+}
+
+function stop()
+{
+   clearInterval(y)
+}
+
+
+var audio=document.getElementById("audio");
+var play=document.getElementById("play");
+var count=0;
+function sound()
+{
+    if(count==0){
+      count=1;
+      audio.play();
+      play.innerHTML="pause";
+    }
+    else{
+      count=0;
+      audio.pause();
+      play.innerHTML="pause";
+    }
+}
+
+</script>
+
+<!-- ............. game section end ..................... -->
+
+
+<!-- ............................... footer section   ................... -->
+<section class="bg-gray-900 p-10">
+  <div class="bg-transparent grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2  grid-cols-2 gap-3">
+      <div class="p-5">
+         <p class="text-xl px-3 text-left font-bold text-white mb-10">Customer app</p>
+          <a href="#"> <img src="rapido_image/app-store.png"> </a>
+      </div>
+
+       <div class="p-5">
+         <p class="text-xl px-3 text-left font-bold text-white mb-10">Captain app</p>
+          <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwj2v6vr87n7AhVaDisKHYb9DcsYABAAGgJzZg&ohost=www.google.com&cid=CAASJuRo_GEMIbF2eNLwU6vAL5_50396Hqdny32Rs8JELpfhxA-1h-3o&sig=AOD64_1SpaHOyVxswmuLZTuCy64CheQt4w&q&adurl&ved=2ahUKEwjqnKXr87n7AhUbxDgGHa4ZA08Q0Qx6BAgIEAE"><img src="rapido_image/google play store.png"> </a>
+      </div>
+      
+       <div class="p-5">
+         <p class="text-xl px-3 font-bold text-white">Services</p>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white mt-5">Home</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">About Us</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Careers</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Carporate</p></a>
+       </div>
+
+      <div class="p-5">
+         <p class="text-xl px-3 font-bold text-white">Policy</p>
+         <a href="#"><p class="text-md px-3 text-left p-3 text-white mt-5">Privacy</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Customer Terms</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Captain Terms</p></a>
+        <a href="#"><p class="text-md px-3 text-left p-3 text-white">Press</p></a>
+      </div>
+       <div class="p-5">
+         <p class="text-xl text-left font-bold text-white">Follow Us</p><br>
+         <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiZ7bmr7LX7AhVIUGwGHb21BksQFnoECA4QAQ&url=https%3A%2F%2Fwww.facebook.com%2Frapido4bike%2F&usg=AOvVaw0OA2xan8EiMAnzKDNWoXbW"><i class="fa-brands fa-facebook-f text-2xl ml-3 text-white"></i></a>
+         <a href="https://www.twitter.com"><i class="fa-brands fa-twitter text-2xl ml-3 text-white"></i></a>
+         <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin-in text-2xl ml-3 text-white"></i></a>
+         <a href="https://www.instagram.com/rapidoapp/?hl=en"><i class="fa-brands fa-instagram text-2xl ml-3 text-white"></i></a>
+      </div>
+
+  </div><hr>
+     <p class="text-md px-3 text-center p-3 text-white">Copyright © Rapido.com | Roppen Transportation. All rights reserved.</p>
+</section>
+
+
+  
+
+ 
+
+
+<script src="https://unpkg.com/flowbite@1.6.1/dist/flowbite.min.js"></script>
+
+</body>
+</html>
+
+
